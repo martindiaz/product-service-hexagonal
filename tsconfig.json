@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                 // Buen nivel para Node moderno
+    "module": "CommonJS",               // Módulo común para Node
+    "moduleResolution": "node",
+    "outDir": "dist",                   // Carpeta de salida de los compilados
+    "rootDir": "src",                   // Carpeta raíz de tu código fuente
+    "strict": true,                     // Activa todas las comprobaciones estrictas (muy recomendado)
+    "esModuleInterop": true,            // Facilita importar paquetes de npm
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "sourceMap": true,                  // Útil para depuración
+    "resolveJsonModule": true,          // Permite importar archivos JSON
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "exclude": ["node_modules", "dist"]
+}

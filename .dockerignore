@@ -1,0 +1,22 @@
+# Node modules y dependencias locales
+node_modules
+npm-debug.log
+package-lock.json
+
+# Archivos de salida de TypeScript
+dist
+
+# Configuración local o sensible
+.env
+.env.*
+
+# Archivos de editor
+.vscode
+.idea
+
+# Otros archivos innecesarios
+Dockerfile
+docker-compose.yml
+.git
+.gitignore
+README.md
