@@ -1,7 +1,6 @@
 # Node modules y dependencias locales
 node_modules
 npm-debug.log
-package-lock.json
 
 # Archivos de salida de TypeScript
 dist
@@ -14,9 +13,8 @@ dist
 .vscode
 .idea
 
-# Otros archivos innecesarios
-Dockerfile
-docker-compose.yml
+# Otros archivos innecesarios del repositorio
 .git
 .gitignore
 README.md
+

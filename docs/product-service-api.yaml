@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Product Service API
+  version: 1.0.0
+  description: API para gestión de productos.
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+  /products:
+    post:
+      summary: Crear un nuevo producto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductInput'
+      responses:
+        '201':
+          description: Producto creado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+
+    get:
+      summary: Listar productos
+      responses:
+        '200':
+          description: Lista de productos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        price:
+          type: number
+        stock:
+          type: integer
+        category:
+          type: string
+
+    ProductInput:
+      type: object
+      required:
+        - name
+        - price
+        - stock
+        - category
+      properties:
+        name:
+          type: string
+        price:
+          type: number
+        stock:
+          type: integer
+        category:
+          type: string
+
+    SuccessResponse:
+      type: object
+      properties:
+        message:
+          type: string
