@@ -4,7 +4,6 @@
     "module": "CommonJS",               // Módulo común para Node
     "moduleResolution": "node",
     "outDir": "dist",                   // Carpeta de salida de los compilados
-    "rootDir": "src",                   // Carpeta raíz de tu código fuente
     "strict": true,                     // Activa todas las comprobaciones estrictas (muy recomendado)
     "esModuleInterop": true,            // Facilita importar paquetes de npm
     "forceConsistentCasingInFileNames": true,
@@ -14,5 +13,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
+  "include": ["src/**/*", "test/**/*"],
   "exclude": ["node_modules", "dist"]
 }

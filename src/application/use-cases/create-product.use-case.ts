@@ -6,6 +6,10 @@ export class CreateProductUseCase {
   constructor(private readonly productRepository: ProductRepository) {}
 
   async execute(name: string, price: number, stock: number, category: string): Promise<void> {
+    if (price < 0) {
+      throw new Error('El precio no puede ser negativo');
+    }
+
     const product = new Product(uuidv4(), name, price, stock, category);
     await this.productRepository.save(product);
   }

@@ -1,0 +1,46 @@
+name: Unit Tests
+
+on:
+  push:
+    branches: [master, develop, feature/*]
+  pull_request:
+    branches: [master, develop, feature/*]
+  workflow_dispatch:
+  
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar tests unitarios
+        run: npx jest --testPathPattern=unit
+
+
+
+/*
+
+rápido, sin levantar infra real
+
+
+Para que Jest ejecute solo los tests unitarios con este workflow, deberías:
+
+✔ Tener los tests unitarios en rutas que contengan la palabra unit, por ejemplo:
+
+rust
+Copiar
+Editar
+src/infrastructure/persistence/product.repository.impl.unit.spec.ts
+src/application/use-cases/create-product.use-case.unit.spec.ts
+O bien, puedes agruparlos en una carpeta separada, pero lo de incluir .unit.spec.ts en el nombre es muy habitual y práctico.
+*/
