@@ -24,7 +24,9 @@ jobs:
         run: npm install
 
       - name: Ejecutar tests unitarios
-        run: npx jest --testPathPattern=".*\.unit\.spec\.ts$"
+        run: npm run test:unit
+
+
 
 
 

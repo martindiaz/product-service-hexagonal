@@ -4,11 +4,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/main.js",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
     "start:dev": "ts-node-dev --respawn --transpile-only src/main.ts",
     "build": "tsc",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test": "jest",
+    "test:unit": "jest \".*\\.unit\\.spec\\.ts$\"",
+    "test:integration": "jest \".*\\.integration\\.spec\\.ts$\"",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "keywords": [],
