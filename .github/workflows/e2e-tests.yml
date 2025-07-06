@@ -36,3 +36,6 @@ jobs:
         env:
           MONGO_URL: mongodb://localhost:27017/productdb
         run: npm run test:e2e
+
+
+# ejectua el e2e solo al crear una release en github

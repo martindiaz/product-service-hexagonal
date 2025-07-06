@@ -39,6 +39,5 @@ jobs:
 
 
 
-/*
-Mongo real o Mongo Memory, validación completa
-*/
+
+# valida el caso de uso accediendo a la bbdd Mongo real o Mongo Memory, validación completa
