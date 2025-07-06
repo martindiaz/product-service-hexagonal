@@ -24,7 +24,8 @@ jobs:
         run: npm install
 
       - name: Ejecutar tests unitarios
-        run: npx jest --testPathPattern=unit
+        npx jest "unit"
+
 
 
 
@@ -32,14 +33,3 @@ jobs:
 
 # rápido, sin levantar infra real
 
-
-# Para que Jest ejecute solo los tests unitarios con este workflow, deberías:
-
-# ✔ Tener los tests unitarios en rutas que contengan la palabra unit, por ejemplo:
-
-# rust
-# Copiar
-# Editar
-# src/infrastructure/persistence/product.repository.impl.unit.spec.ts
-# src/application/use-cases/create-product.use-case.unit.spec.ts
-# O bien, puedes agruparlos en una carpeta separada, pero lo de incluir .unit.spec.ts en el nombre es muy habitual y práctico.
